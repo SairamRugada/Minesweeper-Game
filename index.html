@@ -1,0 +1,23 @@
+<!--Coded by Sairam Rugada-->
+<!DOCTYPE html>
+<html lang="en" ng-app="Minesweeper">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Minesweeper Game</title>
+	<link rel="icon" href="images/Minesweeper_Icon.png">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+	<script src="javascripts/main.js"></script>
+</head>
+
+<body ng-controller="MinesweeperController">
+	<table border="1">
+		<tr ng-repeat="row in minefield.rows">
+			<td ng-repeat="spot in row.spots" ng-click="spot.isCovered = false">
+				{{spot.isRevealed}}
+			</td>
+		</tr>
+	</table>
+</body>
+
+</html>
